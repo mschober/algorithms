@@ -27,3 +27,6 @@ class LinkedList:
 
     def __len__(self):
         return self.length
+
+    def addLast(self, data):
+        pass
