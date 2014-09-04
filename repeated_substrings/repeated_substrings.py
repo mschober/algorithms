@@ -47,6 +47,8 @@ while half_split_size > 2:
 print repeated_sub, len(repeated_sub) #could probably get the length of the word with more output parameters or something
 
 #this is now a correct implementation with several great optimizations for speed, but the code is pretty heinous in terms of readability, might due for more refactoring
+#another point is there was care taken to skip iterating for single characters, however edge cases were ignored
+#IE. what to do with an empty string? what to do with a string that is all repeating? length < 4?
 
 
 
