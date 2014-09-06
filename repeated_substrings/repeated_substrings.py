@@ -5,8 +5,8 @@ wrd = '12'
 wrd = 'a' * 99
 wrd = 'a' * 20
 #print wrd
-wrd = 'banana'
 wrd = 'a' * 100
+wrd = 'banana'*5
 
 def sub_words(wrd, split_size):
     while len(wrd) >= split_size:
@@ -43,40 +43,10 @@ while half_split_size > 2:
         break #found biggest, be done
     half_split_size -= 1
 
-#print wrds
+print wrds
 print repeated_sub, len(repeated_sub) #could probably get the length of the word with more output parameters or something
 
 #this is now a correct implementation with several great optimizations for speed, but the code is pretty heinous in terms of readability, might due for more refactoring
 #another point is there was care taken to skip iterating for single characters, however edge cases were ignored
 #IE. what to do with an empty string? what to do with a string that is all repeating? length < 4?
 
-
-
-
-
-
-
-
-
-
-
-
-#repeats = {}
-#while wrd_len > 3:
-#    wrd_len -= 1
-#    iterations = 0
-#    for sub in sub_words(wrd, wrd_len):
-#        iterations += 1
-#        print sub
-#    wrd_len = iterations * 
-#    wrd_len -= 1
-#    for swrd in sub_words(wrd, wrd_len):
-#        if swrd in repeats.keys():
-#            repeats[swrd] = True
-#        else:
-#            repeats[swrd] = False
-#
-#
-#for key, value in repeats.items():
-#    if value:
-#        print key
