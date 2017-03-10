@@ -29,22 +29,25 @@ lls = [
     [3, LL(1), LL(1)],
     [3, LL(3), None],
     [3, LL(3).append(LL(3)).append(LL(3)).append(LL(4)), LL(4)],
-    [3, LL(3).append(LL(3)), None]
+    [4, LL(4).append(LL(4)), None],
+    [5, LL(1).append(LL(5)).append(LL(5)), LL(1)]
 ]
 
 def remove_match(ll, rm):
     if not ll:
         return None
-    if not ll.next and ll.data == rm:
-        return None
     
     curr = ll
     while curr.next != None:
         if curr.next.data == rm:
-            #print 'remove %s' % curr.next.data
+            print 'remove %s' % curr.next.data
             curr.next = curr.next.next
         else:
             curr = curr.next
+            
+    if not curr.next and curr.data == rm:
+        return None
+    
     return ll
 
 for test in lls:
